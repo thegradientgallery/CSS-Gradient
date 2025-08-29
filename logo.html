@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Pure CSS Logo Collection | Creative CSS Shapes & Designs</title>
+  <meta name="description" content="Explore 20+ creative CSS logo shapes including circles, triangles, stars, and more. Copy CSS code instantly for your web projects. Perfect for students and developers learning CSS.">
+  <meta name="keywords" content="css logos, css shapes, pure css, web design, css tutorial, logo design, css art, frontend development, css examples, geometric shapes">
+  <meta name="author" content="CSS Logo Collection">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pure CSS Logo Collection - Creative CSS Shapes">
+  <meta property="og:description" content="Discover 20+ beautiful CSS logo shapes. Click to copy CSS code instantly!">
+  <meta property="og:url" content="https://yourwebsite.com/logo.html">
+  <meta property="og:site_name" content="CSS Logo Collection">
+  <meta property="og:image" content="https://yourwebsite.com/css-logos-preview.jpg">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pure CSS Logo Collection">
+  <meta name="twitter:description" content="Creative CSS shapes and logos. Copy code instantly!">
+  <meta name="twitter:image" content="https://yourwebsite.com/css-logos-preview.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,90 10,90' fill='%236366f1'/></svg>">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pure CSS Logo Collection",
+    "description": "Collection of creative CSS logo shapes with copy functionality",
+    "url": "https://yourwebsite.com/logo.html",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "CSS Logo Collection"
+    }
+  }
+  </script>
+
+  <style>
+    /* CSS Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    /* Header Styles */
+    .navbar {
+      background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .navbar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .navbar:hover::before {
+      left: 100%;
+    }
+
+    .navbar:hover {
+      background: linear-gradient(135deg, #00d2ff 0%, #928dff 100%);
+      transition: all 0.6s ease;
+    }
+
+    .navbar h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: white;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .navbar .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+      font-style: italic;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .intro-section {
+      text-align: center;
+      margin-bottom: 3rem;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-section h2 {
+      font-size: 2rem;
+      color: #2d3748;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Logo Grid */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    .logo-box {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #6366f1, #ec4899, #f59e0b);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-box:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .logo-box:hover::before {
+      opacity: 1;
+    }
+
+    .logo-shape {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+      transition: all 0.3s ease;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .logo-shape:hover {
+      transform: scale(1.1);
+      filter: brightness(1.1);
+    }
+
+    .logo-shape.copied {
+      outline: 3px solid #10b981;
+      transform: scale(1.15);
+    }
+
+    .shape-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #4a5568;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      text-transform: capitalize;
+    }
+
+    .copy-indicator {
+      font-size: 0.875rem;
+      color: #718096;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    /* Shape Definitions */
+    .circle { 
+      border-radius: 50%; 
+    }
+
+    .triangle {
+      width: 0; 
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 80px solid;
+      border-bottom-color: #6366f1;
+      background: none;
+    }
+
+    .diamond { 
+      transform: rotate(45deg); 
+      border-radius: 8px; 
+    }
+
+    .hexagon { 
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); 
+    }
+
+    .star {
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .blob {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    .oval { 
+      border-radius: 50% / 30%; 
+    }
+
+    .parallelogram { 
+      transform: skew(20deg); 
+    }
+
+    .trapezoid {
+      clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    .crescent {
+      border-radius: 50%;
+      box-shadow: -20px 0 0 0 rgba(255, 255, 255, 0.95) inset;
+    }
+
+    .arch {
+      border-radius: 80px 80px 0 0;
+      height: 40px;
+    }
+
+    .tag {
+      clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+    }
+
+    .chevron {
+      clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%, 30% 50%);
+    }
+
+    .pill { 
+      border-radius: 40px; 
+    }
+
+    .pacman {
+      border-radius: 50%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+    }
+
+    .triangle-down {
+      width: 0; 
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 80px solid;
+      border-top-color: #6366f1;
+      background: none;
+    }
+
+    .rhombus {
+      transform: rotate(45deg);
+      width: 60px; 
+      height: 60px;
+    }
+
+    .arrow {
+      clip-path: polygon(0 50%, 50% 0, 50% 30%, 100% 30%, 100% 70%, 50% 70%, 50% 100%);
+    }
+
+    .heart {
+      clip-path: path("M40,20 C40,10 50,10 50,20 C50,10 60,10 60,20 C60,30 50,40 40,20 Z");
+    }
+
+    .drop {
+      clip-path: path("M40,10 C50,30 60,50 40,70 C20,50 30,30 40,10 Z");
+    }
+
+    /* Success Message */
+    .success-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .success-message.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: white;
+      margin-top: 2rem;
+    }
+
+    .footer p {
+      font-size: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1.5rem 1rem;
+      }
+      
+      .navbar h1 {
+        font-size: 2rem;
+      }
+      
+      .navbar .subtitle {
+        font-size: 1rem;
+      }
+      
+      .main-content {
+        padding: 1.5rem 1rem;
+      }
+      
+      .intro-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      
+      .intro-section h2 {
+        font-size: 1.75rem;
+      }
+      
+      .intro-section p {
+        font-size: 1rem;
+      }
+      
+      .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+      
+      .logo-box {
+        min-height: 160px;
+        padding: 1.5rem;
+      }
+      
+      .logo-shape {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .triangle, .triangle-down {
+        border-left-width: 30px;
+        border-right-width: 30px;
+        border-bottom-width: 60px;
+      }
+      
+      .triangle-down {
+        border-top-width: 60px;
+        border-bottom-width: 0;
+      }
+      
+      .rhombus {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .arch {
+        border-radius: 60px 60px 0 0;
+        height: 30px;
+      }
+      
+      .crescent {
+        box-shadow: -15px 0 0 0 rgba(255, 255, 255, 0.95) inset;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .navbar h1 {
+        font-size: 1.75rem;
+      }
+      
+      .navbar .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .intro-section h2 {
+        font-size: 1.5rem;
+      }
+      
+      .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.75rem;
+      }
+      
+      .logo-box {
+        min-height: 140px;
+        padding: 1rem;
+      }
+      
+      .logo-shape {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .triangle, .triangle-down {
+        border-left-width: 25px;
+        border-right-width: 25px;
+        border-bottom-width: 50px;
+      }
+      
+      .triangle-down {
+        border-top-width: 50px;
+        border-bottom-width: 0;
+      }
+      
+      .rhombus {
+        width: 35px;
+        height: 35px;
+      }
+      
+      .arch {
+        border-radius: 50px 50px 0 0;
+        height: 25px;
+      }
+      
+      .crescent {
+        box-shadow: -12px 0 0 0 rgba(255, 255, 255, 0.95) inset;
+      }
+      
+      .shape-name {
+        font-size: 0.9rem;
+      }
+      
+      .copy-indicator {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .navbar, .footer {
+        background: none !important;
+        color: black !important;
+      }
+      
+      .logo-box {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+      }
+    }
+
+    /* High Contrast Mode */
+    @media (prefers-contrast: high) {
+      .logo-box {
+        border: 2px solid #000;
+      }
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="navbar" role="banner">
+    <h1>Pure CSS Logo Collection</h1>
+    <p class="subtitle">Click on any shape to copy its CSS code</p>
+  </header>
+
+  <main class="main-content" role="main">
+    <section class="intro-section">
+      <h2>Creative CSS Shapes & Logos</h2>
+      <p>Explore our collection of 20 unique CSS shapes perfect for logos and design elements. Each shape is created using pure CSS - no images required! Simply click on any shape to copy its CSS code to your clipboard.</p>
+    </section>
+
+    <section class="logo-grid" aria-label="CSS Logo Collection">
+      <article class="logo-box" onclick="copyLogo(this, 'circle')" tabindex="0" role="button" aria-label="Copy circle CSS code">
+        <div class="logo-shape circle"></div>
+        <h3 class="shape-name">Circle</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'triangle')" tabindex="0" role="button" aria-label="Copy triangle CSS code">
+        <div class="logo-shape triangle"></div>
+        <h3 class="shape-name">Triangle</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'diamond')" tabindex="0" role="button" aria-label="Copy diamond CSS code">
+        <div class="logo-shape diamond"></div>
+        <h3 class="shape-name">Diamond</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'hexagon')" tabindex="0" role="button" aria-label="Copy hexagon CSS code">
+        <div class="logo-shape hexagon"></div>
+        <h3 class="shape-name">Hexagon</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'star')" tabindex="0" role="button" aria-label="Copy star CSS code">
+        <div class="logo-shape star"></div>
+        <h3 class="shape-name">Star</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'blob')" tabindex="0" role="button" aria-label="Copy blob CSS code">
+        <div class="logo-shape blob"></div>
+        <h3 class="shape-name">Blob</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'oval')" tabindex="0" role="button" aria-label="Copy oval CSS code">
+        <div class="logo-shape oval"></div>
+        <h3 class="shape-name">Oval</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'parallelogram')" tabindex="0" role="button" aria-label="Copy parallelogram CSS code">
+        <div class="logo-shape parallelogram"></div>
+        <h3 class="shape-name">Parallelogram</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'trapezoid')" tabindex="0" role="button" aria-label="Copy trapezoid CSS code">
+        <div class="logo-shape trapezoid"></div>
+        <h3 class="shape-name">Trapezoid</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'crescent')" tabindex="0" role="button" aria-label="Copy crescent CSS code">
+        <div class="logo-shape crescent"></div>
+        <h3 class="shape-name">Crescent</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'arch')" tabindex="0" role="button" aria-label="Copy arch CSS code">
+        <div class="logo-shape arch"></div>
+        <h3 class="shape-name">Arch</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'tag')" tabindex="0" role="button" aria-label="Copy tag CSS code">
+        <div class="logo-shape tag"></div>
+        <h3 class="shape-name">Tag</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'chevron')" tabindex="0" role="button" aria-label="Copy chevron CSS code">
+        <div class="logo-shape chevron"></div>
+        <h3 class="shape-name">Chevron</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'pill')" tabindex="0" role="button" aria-label="Copy pill CSS code">
+        <div class="logo-shape pill"></div>
+        <h3 class="shape-name">Pill</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'pacman')" tabindex="0" role="button" aria-label="Copy pacman CSS code">
+        <div class="logo-shape pacman"></div>
+        <h3 class="shape-name">Pacman</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'triangle-down')" tabindex="0" role="button" aria-label="Copy inverted triangle CSS code">
+        <div class="logo-shape triangle-down"></div>
+        <h3 class="shape-name">Triangle Down</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'rhombus')" tabindex="0" role="button" aria-label="Copy rhombus CSS code">
+        <div class="logo-shape rhombus"></div>
+        <h3 class="shape-name">Rhombus</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'arrow')" tabindex="0" role="button" aria-label="Copy arrow CSS code">
+        <div class="logo-shape arrow"></div>
+        <h3 class="shape-name">Arrow</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'heart')" tabindex="0" role="button" aria-label="Copy heart CSS code">
+        <div class="logo-shape heart"></div>
+        <h3 class="shape-name">Heart</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+
+      <article class="logo-box" onclick="copyLogo(this, 'drop')" tabindex="0" role="button" aria-label="Copy drop CSS code">
+        <div class="logo-shape drop"></div>
+        <h3 class="shape-name">Drop</h3>
+        <p class="copy-indicator">Click to copy</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <p>© Pure CSS Logo Collection  | Created with using Pure CSS</p>
+  </footer>
+
+  <!-- Success Message -->
+  <div id="successMessage" class="success-message">
+    ✓ CSS Code Copied Successfully!
+  </div>
+
+  <script>
+    // CSS Templates for each shape
+    const cssTemplates = {
+      circle: `/* Circle Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 50%;
+}`,
+      
+      triangle: `/* Triangle Logo */
+.logo {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid #6366f1;
+}`,
+      
+      diamond: `/* Diamond Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  transform: rotate(45deg);
+  border-radius: 8px;
+}`,
+      
+      hexagon: `/* Hexagon Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}`,
+      
+      star: `/* Star Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}`,
+      
+      blob: `/* Blob Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}`,
+      
+      oval: `/* Oval Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 50% / 30%;
+}`,
+      
+      parallelogram: `/* Parallelogram Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  transform: skew(20deg);
+}`,
+      
+      trapezoid: `/* Trapezoid Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}`,
+      
+      crescent: `/* Crescent Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 50%;
+  box-shadow: -20px 0 0 0 #ffffff inset;
+}`,
+      
+      arch: `/* Arch Logo */
+.logo {
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 80px 80px 0 0;
+}`,
+      
+      tag: `/* Tag Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+}`,
+      
+      chevron: `/* Chevron Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%, 30% 50%);
+}`,
+      
+      pill: `/* Pill Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 40px;
+}`,
+      
+      pacman: `/* Pacman Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+}`,
+      
+      'triangle-down': `/* Triangle Down Logo */
+.logo {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 80px solid #6366f1;
+}`,
+      
+      rhombus: `/* Rhombus Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  transform: rotate(45deg);
+}`,
+      
+      arrow: `/* Arrow Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: polygon(0 50%, 50% 0, 50% 30%, 100% 30%, 100% 70%, 50% 70%, 50% 100%);
+}`,
+      
+      heart: `/* Heart Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: path("M40,20 C40,10 50,10 50,20 C50,10 60,10 60,20 C60,30 50,40 40,20 Z");
+}`,
+      
+      drop: `/* Drop Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  clip-path: path("M40,10 C50,30 60,50 40,70 C20,50 30,30 40,10 Z");
+}`
+    };
+
+    function copyLogo(element, shapeName) {
+      const cssCode = cssTemplates[shapeName];
+      const logoShape = element.querySelector('.logo-shape');
+      
+      if (cssCode) {
+        navigator.clipboard.writeText(cssCode)
+          .then(() => {
+            // Visual feedback
+            logoShape.classList.add("copied");
+            showSuccessMessage();
+            
+            // Reset after delay
+            setTimeout(() => {
+              logoShape.classList.remove("copied");
+            }, 1500);
+            
+            // Analytics (if needed)
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'logo_copied', {
+                'logo_shape': shapeName,
+                'css_code': cssCode
+              });
+            }
+          })
+          .catch(err => {
+            console.error("Copy failed:", err);
+            
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = cssCode;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+              document.execCommand('copy');
+              logoShape.classList.add("copied");
+              showSuccessMessage();
+              setTimeout(() => {
+                logoShape.classList.remove("copied");
+              }, 1500);
+            } catch (fallbackErr) {
+              alert("Copy failed. Please try again.");
+            }
+            document.body.removeChild(textArea);
+          });
+      }
+    }
+
+    function showSuccessMessage() {
+      const message = document.getElementById('successMessage');
+      message.classList.add('show');
+      setTimeout(() => {
+        message.classList.remove('show');
+      }, 2000);
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const focused = document.activeElement;
+        if (focused && focused.classList.contains('logo-box')) {
+          e.preventDefault();
+          focused.click();
+        }
+      }
+    });
+
+    // Performance optimization: Intersection Observer for animations
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeIn 0.6s ease forwards';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.logo-box').forEach(box => {
+        observer.observe(box);
+      });
+    }
+
+    // Add loading animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const boxes = document.querySelectorAll('.logo-box');
+      boxes.forEach((box, index) => {
+        setTimeout(() => {
+          box.style.opacity = '1';
+          box.style.transform = 'translateY(0)';
+        }, index * 50);
+      });
+    });
+  </script>
+
+  <style>
+    /* Loading animation */
+    .logo-box {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+  </style>
+</body>
+</html>

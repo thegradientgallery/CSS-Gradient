@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSSpectrum - Free CSS Gradient Backgrounds</title>
+  <meta name="description" content="Explore a curated collection of 120 beautiful CSS gradient backgrounds across Warm, Cool, Neutral, Vibrant, Forest and Pastel categories. Copy ready-to-use linear gradients for web design, UI, and creative projects.">
+  <meta name="keywords" content="CSS gradients, free gradients, gradient backgrounds, background colors, CSS design, linear gradient, web design, UI colors, color palettes">
+  <meta name="author" content="CSSpectrum">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="CSSpectrum - Free CSS Gradient Backgrounds">
+  <meta property="og:description" content="Explore 120 free CSS gradient backgrounds. Copy instantly for your projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/csspectrum">
+  <meta property="og:image" content="https://example.com/preview.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #78C9F9, #9A48D0);
+      clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 60% 100%, 60% 60%, 40% 60%, 40% 100%, 20% 100%, 0% 80%, 0% 20%);
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
+
+    .logo-section h2 {
+      color: #fff;
+      font-size: 1.8rem;
+      font-family: 'Lucida Sans', sans-serif;
+      font-weight: normal;
+      text-shadow: 0 2px 8px #9A48D0;
+    }
+
+    .option-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #gradient-select {
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: none;
+      background: #e0dddb;
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    a {
+      color: #2121a9;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      transition: .3s;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 20px;
+      color: #212121;
+    }
+
+    .gradient-collection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .color-card {
+      width: 280px;
+      background: #f0edeb;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .color-card p {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .swatch {
+      border-radius: 8px;
+      height: 100px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: #ff6e7f;
+      color: #fff;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: .75rem;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #ff4c5a;
+    }
+
+    .copy-btn.copied {
+      background: #4caf50;
+    }
+
+    .code-wrapper {
+      background: #2d2d2d;
+      border-radius: 6px;
+      padding: 6px;
+      overflow-x: auto;
+    }
+
+    .code-block {
+      color: #f8f8f8;
+      font-family: 'Courier New', monospace;
+      font-size: .8rem;
+      white-space: nowrap;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .color-card {
+        width: 45%;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .logo-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .color-card {
+        width: 100%;
+      }
+
+      .logo-section {
+        flex-direction: column;
+      }
+
+      .logo-section h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo-section">
+      <div class="logo"></div>
+      <h2><i>CSSpectrum</i></h2>
+    </div>
+    <div class="option-section">
+      <label for="gradient-select" id="label-value">Choose a gradient type:</label>
+      <select id="gradient-select">
+        <option value="all">All</option>
+        <option value="warm">Warm</option>
+        <option value="cool">Cool</option>
+        <option value="neutral">Neutral</option>
+        <option value="vibrant">Vibrant</option>
+        <option value="pastel">Pastel</option>
+        <option value="forest">Forest</option>
+      </select>
+      <a href="logo.html" target="_blank">Logo via CSS Styled</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Explore Our Gradient Collection</h2>
+  <div class="gradient-collection">
+
+    <!-- === WARM 1 - 20 === -->
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 1</p>
+      <div class="swatch warm1" style="background: linear-gradient(to right,#ff9a9e,#fecfef);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff9a9e,#fecfef);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 2</p>
+      <div class="swatch warm2" style="background: linear-gradient(to right,#fecf71,#f55347);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fecf71,#f55347);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 3</p>
+      <div class="swatch warm3" style="background: linear-gradient(to right,#ff7e5f,#feb47b);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff7e5f,#feb47b);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 4</p>
+      <div class="swatch warm4" style="background: linear-gradient(to right,#fc4a1a,#f7b733);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fc4a1a,#f7b733);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 5</p>
+      <div class="swatch warm5" style="background: linear-gradient(to right,#ff5f6d,#ffc371);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff5f6d,#ffc371);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 6</p>
+      <div class="swatch warm6" style="background: linear-gradient(to right,#ff9966,#ff5e62);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff9966,#ff5e62);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 7</p>
+      <div class="swatch warm7" style="background: linear-gradient(to right,#f77062,#fe5196);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f77062,#fe5196);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 8</p>
+      <div class="swatch warm8" style="background: linear-gradient(to right,#f7971e,#ffd200);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f7971e,#ffd200);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 9</p>
+      <div class="swatch warm9" style="background: linear-gradient(to right,#ff512f,#dd2476);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff512f,#dd2476);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 10</p>
+      <div class="swatch warm10" style="background: linear-gradient(to right,#f857a6,#ff5858);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f857a6,#ff5858);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 11</p>
+      <div class="swatch warm11" style="background: linear-gradient(to right,#fbd3e9,#bb377d);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fbd3e9,#bb377d);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 12</p>
+      <div class="swatch warm12" style="background: linear-gradient(to right,#e96443,#904e95);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e96443,#904e95);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 13</p>
+      <div class="swatch warm13" style="background: linear-gradient(to right,#ffafbd,#ffc3a0);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ffafbd,#ffc3a0);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 14</p>
+      <div class="swatch warm14" style="background: linear-gradient(to right,#d53369,#daae51);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#d53369,#daae51);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 15</p>
+      <div class="swatch warm15" style="background: linear-gradient(to right,#f46b45,#eea849);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f46b45,#eea849);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 16</p>
+      <div class="swatch warm16" style="background: linear-gradient(to right,#e43a15,#e65245);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e43a15,#e65245);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 17</p>
+      <div class="swatch warm17" style="background: linear-gradient(to right,#ed4264,#ffedbc);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ed4264,#ffedbc);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 18</p>
+      <div class="swatch warm18" style="background: linear-gradient(to right,#fceabb,#f8b500);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fceabb,#f8b500);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 19</p>
+      <div class="swatch warm19" style="background: linear-gradient(to right,#fa709a,#fee140);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fa709a,#fee140);</code></div>
+    </div>
+
+    <div class="color-card" data-type="warm">
+      <p>Gradient Type: Warm 20</p>
+      <div class="swatch warm20" style="background: linear-gradient(to right,#ff4b2b,#ff416c);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff4b2b,#ff416c);</code></div>
+    </div>
+
+    <!-- === COOL 1 - 20 === -->
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 1</p>
+      <div class="swatch cool1" style="background: linear-gradient(to right,#2193b0,#6dd5ed);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#2193b0,#6dd5ed);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 2</p>
+      <div class="swatch cool2" style="background: linear-gradient(to right,#00c6ff,#0072ff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00c6ff,#0072ff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 3</p>
+      <div class="swatch cool3" style="background: linear-gradient(to right,#007adf,#00ecbc);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#007adf,#00ecbc);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 4</p>
+      <div class="swatch cool4" style="background: linear-gradient(to right,#00f260,#0575e6);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00f260,#0575e6);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 5</p>
+      <div class="swatch cool5" style="background: linear-gradient(to right,#1e3c72,#2a5298);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#1e3c72,#2a5298);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 6</p>
+      <div class="swatch cool6" style="background: linear-gradient(to right,#00b4db,#0083b0);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00b4db,#0083b0);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 7</p>
+      <div class="swatch cool7" style="background: linear-gradient(to right,#83a4d4,#b6fbff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#83a4d4,#b6fbff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 8</p>
+      <div class="swatch cool8" style="background: linear-gradient(to right,#2980b9,#6dd5fa);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#2980b9,#6dd5fa);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 9</p>
+      <div class="swatch cool9" style="background: linear-gradient(to right,#36d1dc,#5b86e5);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#36d1dc,#5b86e5);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 10</p>
+      <div class="swatch cool10" style="background: linear-gradient(to right,#74ebd5,#acb6e5);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#74ebd5,#acb6e5);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 11</p>
+      <div class="swatch cool11" style="background: linear-gradient(to right,#43cea2,#185a9d);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#43cea2,#185a9d);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 12</p>
+      <div class="swatch cool12" style="background: linear-gradient(to right,#b2fefa,#0ed2f7);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#b2fefa,#0ed2f7);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 13</p>
+      <div class="swatch cool13" style="background: linear-gradient(to right,#8EC5FC,#E0C3FC);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#8EC5FC,#E0C3FC);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 14</p>
+      <div class="swatch cool14" style="background: linear-gradient(to right,#56CCF2,#2F80ED);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#56CCF2,#2F80ED);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 15</p>
+      <div class="swatch cool15" style="background: linear-gradient(to right,#1CB5E0,#000851);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#1CB5E0,#000851);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 16</p>
+      <div class="swatch cool16" style="background: linear-gradient(to right,#00d2ff,#3a7bd5);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00d2ff,#3a7bd5);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 17</p>
+      <div class="swatch cool17" style="background: linear-gradient(to right,#1fa2ff,#12d8fa);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#1fa2ff,#12d8fa);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 18</p>
+      <div class="swatch cool18" style="background: linear-gradient(to right,#13547a,#80d0c7);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#13547a,#80d0c7);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 19</p>
+      <div class="swatch cool19" style="background: linear-gradient(to right,#3a7bd5,#00d2ff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#3a7bd5,#00d2ff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="cool">
+      <p>Gradient Type: Cool 20</p>
+      <div class="swatch cool20" style="background: linear-gradient(to right,#a1c4fd,#c2e9fb);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#a1c4fd,#c2e9fb);</code></div>
+    </div>
+
+    <!-- === NEUTRAL 1 - 20 === -->
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 1</p>
+      <div class="swatch neutral1" style="background: linear-gradient(to right,#bdc3c7,#2c3e50);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#bdc3c7,#2c3e50);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 2</p>
+      <div class="swatch neutral2" style="background: linear-gradient(to right,#e0eafc,#cfdef3);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e0eafc,#cfdef3);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 3</p>
+      <div class="swatch neutral3" style="background: linear-gradient(to right,#d7d2cc,#304352);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#d7d2cc,#304352);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 4</p>
+      <div class="swatch neutral4" style="background: linear-gradient(to right,#ece9e6,#ffffff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ece9e6,#ffffff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 5</p>
+      <div class="swatch neutral5" style="background: linear-gradient(to right,#cfd9df,#e2ebf0);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#cfd9df,#e2ebf0);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 6</p>
+      <div class="swatch neutral6" style="background: linear-gradient(to right,#8e9eab,#eef2f3);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#8e9eab,#eef2f3);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 7</p>
+      <div class="swatch neutral7" style="background: linear-gradient(to right,#f5f7fa,#c3cfe2);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f5f7fa,#c3cfe2);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 8</p>
+      <div class="swatch neutral8" style="background: linear-gradient(to right,#b8c6db,#f5f7fa);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#b8c6db,#f5f7fa);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 9</p>
+      <div class="swatch neutral9" style="background: linear-gradient(to right,#dde1e7,#f3f4f7);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#dde1e7,#f3f4f7);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 10</p>
+      <div class="swatch neutral10" style="background: linear-gradient(to right,#d3cce3,#e9e4f0);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#d3cce3,#e9e4f0);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 11</p>
+      <div class="swatch neutral11" style="background: linear-gradient(to right,#c9d6ff,#e2e2e2);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#c9d6ff,#e2e2e2);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 12</p>
+      <div class="swatch neutral12" style="background: linear-gradient(to right,#a6a6a6,#f1f1f1);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#a6a6a6,#f1f1f1);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 13</p>
+      <div class="swatch neutral13" style="background: linear-gradient(to right,#e4e5e6,#00416a);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e4e5e6,#00416a);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 14</p>
+      <div class="swatch neutral14" style="background: linear-gradient(to right,#eef2f3,#8e9eab);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#eef2f3,#8e9eab);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 15</p>
+      <div class="swatch neutral15" style="background: linear-gradient(to right,#b7b7b7,#fdfbfb);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#b7b7b7,#fdfbfb);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 16</p>
+      <div class="swatch neutral16" style="background: linear-gradient(to right,#dad4ec,#f3e7e9);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#dad4ec,#f3e7e9);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 17</p>
+      <div class="swatch neutral17" style="background: linear-gradient(to right,#dfe9f3,#ffffff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#dfe9f3,#ffffff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 18</p>
+      <div class="swatch neutral18" style="background: linear-gradient(to right,#f0f2f0,#000c40);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f0f2f0,#000c40);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 19</p>
+      <div class="swatch neutral19" style="background: linear-gradient(to right,#e0e0e0,#efefef);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e0e0e0,#efefef);</code></div>
+    </div>
+
+    <div class="color-card" data-type="neutral">
+      <p>Gradient Type: Neutral 20</p>
+      <div class="swatch neutral20" style="background: linear-gradient(to right,#ebedee,#fdfbfb);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ebedee,#fdfbfb);</code></div>
+    </div>
+
+    <!-- === VIBRANT 1 - 20 === -->
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 1</p>
+      <div class="swatch vibrant1" style="background: linear-gradient(to right,#fc00ff,#00dbde);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fc00ff,#00dbde);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 2</p>
+      <div class="swatch vibrant2" style="background: linear-gradient(to right,#f12711,#f5af19);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f12711,#f5af19);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 3</p>
+      <div class="swatch vibrant3" style="background: linear-gradient(to right,#ee0979,#ff6a00);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ee0979,#ff6a00);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 4</p>
+      <div class="swatch vibrant4" style="background: linear-gradient(to right,#fe8c00,#f83600);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fe8c00,#f83600);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 5</p>
+      <div class="swatch vibrant5" style="background: linear-gradient(to right,#ff0084,#33001b);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff0084,#33001b);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 6</p>
+      <div class="swatch vibrant6" style="background: linear-gradient(to right,#f00000,#dc281e);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f00000,#dc281e);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 7</p>
+      <div class="swatch vibrant7" style="background: linear-gradient(to right,#7F00FF,#E100FF);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#7F00FF,#E100FF);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 8</p>
+      <div class="swatch vibrant8" style="background: linear-gradient(to right,#12c2e9,#c471ed);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#12c2e9,#c471ed);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 9</p>
+      <div class="swatch vibrant9" style="background: linear-gradient(to right,#f953c6,#b91d73);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f953c6,#b91d73);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 10</p>
+      <div class="swatch vibrant10" style="background: linear-gradient(to right,#ff416c,#ff4b2b);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff416c,#ff4b2b);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 11</p>
+      <div class="swatch vibrant11" style="background: linear-gradient(to right,#ff4b1f,#1fddff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff4b1f,#1fddff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 12</p>
+      <div class="swatch vibrant12" style="background: linear-gradient(to right,#f79d00,#64f38c);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f79d00,#64f38c);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 13</p>
+      <div class="swatch vibrant13" style="background: linear-gradient(to right,#00b09b,#96c93d);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00b09b,#96c93d);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 14</p>
+      <div class="swatch vibrant14" style="background: linear-gradient(to right,#d53369,#cbad6d);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#d53369,#cbad6d);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 15</p>
+      <div class="swatch vibrant15" style="background: linear-gradient(to right,#f05f57,#360940);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f05f57,#360940);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 16</p>
+      <div class="swatch vibrant16" style="background: linear-gradient(to right,#00F5A0,#00D9F5);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00F5A0,#00D9F5);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 17</p>
+      <div class="swatch vibrant17" style="background: linear-gradient(to right,#f4c4f3,#fc67fa);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f4c4f3,#fc67fa);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 18</p>
+      <div class="swatch vibrant18" style="background: linear-gradient(to right,#fbd72b,#f9484a);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fbd72b,#f9484a);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 19</p>
+      <div class="swatch vibrant19" style="background: linear-gradient(to right,#00d2ff,#928DAB);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00d2ff,#928DAB);</code></div>
+    </div>
+
+    <div class="color-card" data-type="vibrant">
+      <p>Gradient Type: Vibrant 20</p>
+      <div class="swatch vibrant20" style="background: linear-gradient(to right,#fc5c7d,#6a82fb);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fc5c7d,#6a82fb);</code></div>
+    </div>
+
+    <!-- === FOREST 1 - 20 === -->
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 1</p>
+      <div class="swatch forest1" style="background: linear-gradient(to right,#2E8B57,#3CB371);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#2E8B57,#3CB371);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 2</p>
+      <div class="swatch forest2" style="background: linear-gradient(to right,#006400,#228B22);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#006400,#228B22);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 3</p>
+      <div class="swatch forest3" style="background: linear-gradient(to right,#0B3D02,#2E8B57);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#0B3D02,#2E8B57);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 4</p>
+      <div class="swatch forest4" style="background: linear-gradient(to right,#228B22,#32CD32);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#228B22,#32CD32);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 5</p>
+      <div class="swatch forest5" style="background: linear-gradient(to right,#006400,#8FBC8F);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#006400,#8FBC8F);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 6</p>
+      <div class="swatch forest6" style="background: linear-gradient(to right,#2c7744,#4da08f);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#2c7744,#4da08f);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 7</p>
+      <div class="swatch forest7" style="background: linear-gradient(to right,#0bab64,#3bb78f);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#0bab64,#3bb78f);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 8</p>
+      <div class="swatch forest8" style="background: linear-gradient(to right,#134e5e,#71b280);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#134e5e,#71b280);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 9</p>
+      <div class="swatch forest9" style="background: linear-gradient(to right,#1e3c72,#2a5298);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#1e3c72,#2a5298);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 10</p>
+      <div class="swatch forest10" style="background: linear-gradient(to right,#56ab2f,#a8e063);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#56ab2f,#a8e063);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 11</p>
+      <div class="swatch forest11" style="background: linear-gradient(to right,#11998e,#38ef7d);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#11998e,#38ef7d);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 12</p>
+      <div class="swatch forest12" style="background: linear-gradient(to right,#3CA55C,#B5AC49);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#3CA55C,#B5AC49);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 13</p>
+      <div class="swatch forest13" style="background: linear-gradient(to right,#184e68,#57ca85);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#184e68,#57ca85);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 14</p>
+      <div class="swatch forest14" style="background: linear-gradient(to right,#00467f,#a5cc82);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#00467f,#a5cc82);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 15</p>
+      <div class="swatch forest15" style="background: linear-gradient(to right,#5a3f37,#2c7744);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#5a3f37,#2c7744);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 16</p>
+      <div class="swatch forest16" style="background: linear-gradient(to right,#1e9600,#fff200);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#1e9600,#fff200);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 17</p>
+      <div class="swatch forest17" style="background: linear-gradient(to right,#2ebf91,#8360c3);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#2ebf91,#8360c3);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 18</p>
+      <div class="swatch forest18" style="background: linear-gradient(to right,#52c234,#061700);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#52c234,#061700);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 19</p>
+      <div class="swatch forest19" style="background: linear-gradient(to right,#2C7744,#5FAD41);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#2C7744,#5FAD41);</code></div>
+    </div>
+
+    <div class="color-card" data-type="forest">
+      <p>Gradient Type: Forest 20</p>
+      <div class="swatch forest20" style="background: linear-gradient(to right,#093028,#237A57);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#093028,#237A57);</code></div>
+    </div>
+
+    <!-- === PASTEL 1 - 20 === -->
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 1</p>
+      <div class="swatch pastel1" style="background: linear-gradient(to right,#fbc2eb,#a6c1ee);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fbc2eb,#a6c1ee);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 2</p>
+      <div class="swatch pastel2" style="background: linear-gradient(to right,#ff9a9e,#fad0c4);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ff9a9e,#fad0c4);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 3</p>
+      <div class="swatch pastel3" style="background: linear-gradient(to right,#a1c4fd,#c2e9fb);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#a1c4fd,#c2e9fb);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 4</p>
+      <div class="swatch pastel4" style="background: linear-gradient(to right,#fdfbfb,#ebedee);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fdfbfb,#ebedee);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 5</p>
+      <div class="swatch pastel5" style="background: linear-gradient(to right,#d4fc79,#96e6a1);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#d4fc79,#96e6a1);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 6</p>
+      <div class="swatch pastel6" style="background: linear-gradient(to right,#ffecd2,#fcb69f);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ffecd2,#fcb69f);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 7</p>
+      <div class="swatch pastel7" style="background: linear-gradient(to right,#e0c3fc,#8ec5fc);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e0c3fc,#8ec5fc);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 8</p>
+      <div class="swatch pastel8" style="background: linear-gradient(to right,#f6d365,#fda085);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f6d365,#fda085);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 9</p>
+      <div class="swatch pastel9" style="background: linear-gradient(to right,#e0eafc,#cfdef3);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e0eafc,#cfdef3);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 10</p>
+      <div class="swatch pastel10" style="background: linear-gradient(to right,#cfd9df,#e2ebf0);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#cfd9df,#e2ebf0);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 11</p>
+      <div class="swatch pastel11" style="background: linear-gradient(to right,#f3e7e9,#e3eeff);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f3e7e9,#e3eeff);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 12</p>
+      <div class="swatch pastel12" style="background: linear-gradient(to right,#fbd3e9,#bbd2c5);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fbd3e9,#bbd2c5);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 13</p>
+      <div class="swatch pastel13" style="background: linear-gradient(to right,#f8cdda,#1d2b64);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#f8cdda,#1d2b64);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 14</p>
+      <div class="swatch pastel14" style="background: linear-gradient(to right,#c3cfe2,#eef2f3);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#c3cfe2,#eef2f3);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 15</p>
+      <div class="swatch pastel15" style="background: linear-gradient(to right,#e0eafc,#f9f9f9);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#e0eafc,#f9f9f9);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 16</p>
+      <div class="swatch pastel16" style="background: linear-gradient(to right,#ffdde1,#ee9ca7);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#ffdde1,#ee9ca7);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 17</p>
+      <div class="swatch pastel17" style="background: linear-gradient(to right,#cfd9df,#a7bfe8);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#cfd9df,#a7bfe8);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 18</p>
+      <div class="swatch pastel18" style="background: linear-gradient(to right,#d9a7c7,#fffcdc);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#d9a7c7,#fffcdc);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 19</p>
+      <div class="swatch pastel19" style="background: linear-gradient(to right,#fbc8d4,#9795f0);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fbc8d4,#9795f0);</code></div>
+    </div>
+
+    <div class="color-card" data-type="pastel">
+      <p>Gradient Type: Pastel 20</p>
+      <div class="swatch pastel20" style="background: linear-gradient(to right,#fdfbfb,#ebedee);">
+        <button class="copy-btn">Copy</button>
+      </div>
+      <div class="code-wrapper"><code class="code-block">background: linear-gradient(to right,#fdfbfb,#ebedee);</code></div>
+    </div>
+
+  </div>
+
+  <script>
+    // Copy to clipboard (event delegation)
+    document.addEventListener('click', e=>{
+      if(e.target.classList.contains('copy-btn')){
+        const code = e.target.closest('.color-card').querySelector('.code-block').textContent.trim();
+        navigator.clipboard.writeText(code).then(()=>{
+          e.target.textContent = 'Copied!';
+          e.target.classList.add('copied');
+          setTimeout(()=>{ e.target.textContent='Copy'; e.target.classList.remove('copied'); }, 1500);
+        }).catch(()=>{});
+      }
+    });
+
+    // Filter
+    document.getElementById('gradient-select').addEventListener('change', e=>{
+      const val = e.target.value;
+      document.querySelectorAll('.color-card').forEach(card=>{
+        card.style.display = (val==='all' || card.dataset.type===val) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
